@@ -1,5 +1,9 @@
 import streamlit
+import pandas
+import requests
 import snowflake.connector
+from urllib.error import URLError
+
 streamlit.title('Zenas App')
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
